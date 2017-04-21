@@ -69,13 +69,13 @@ var arrayJson = [];
     var data = [
   { NUMERO: item.num, 
     PRIORITA:item.PRIORITA , 
-    DATA_CHIAMATA: item.DATA_CHIAMATA, 
-    ORA_CHIAMATA: item.ORA_CHIAMATA, 
-    DATA_INTERVENTO: "",
+    DATA_CHI: item.DATA_CHIAMATA, 
+    ORA_CHI: item.ORA_CHIAMATA, 
+    DATA_INT: "",
     DESCRIZIONE: item.NOTE_INTERVENTO ,
     DESC_LUOGO: item.LOC_IND ,
     COMUNE: item.COMUNE ,
-    RICHIEDENTE: item.COGNOME + " " + item.NOME  ,
+    RICH_: item.COGNOME + " " + item.NOME  ,
     TELE_NUMERO: item.TELE_NUMERO ,
     lat: parseFloat(item.COORD_X.replace(",",".")), lng: parseFloat(item.COORD_Y.replace(",",".")) },
 ];
@@ -96,7 +96,7 @@ var arrayJson = [];
 
 
 	/* Scrittura sul file semplice, ma non memorizza i tag che mi servono per il geoJson
-	fs.writeFile('./chiamate_interventi.json', json, function (err) {
+	fs.writeFile('./chiamate.json', json, function (err) {
   if (err) throw err;
   console.log('Salvato');
 });
