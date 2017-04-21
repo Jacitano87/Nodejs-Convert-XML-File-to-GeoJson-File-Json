@@ -67,16 +67,16 @@ var arrayJson = [];
     //Mi creo l'oggetto geoJson in particolare poichè le lat e lon sono stringhe, le faccio diventare dei float perchè la funzione
     //GeoJson.parse vuole la lat e lon di tipo numerico
     var data = [
-  { NUMERO: item.num, 
-    PRIORITA:item.PRIORITA , 
-    DATA_CHI: item.DATA_CHIAMATA, 
-    ORA_CHI: item.ORA_CHIAMATA, 
-    DATA_INT: "",
-    DESCRIZIONE: item.NOTE_INTERVENTO ,
-    DESC_LUOGO: item.LOC_IND ,
-    COMUNE: item.COMUNE ,
-    RICH_: item.COGNOME + " " + item.NOME  ,
-    TELE_NUMERO: item.TELE_NUMERO ,
+  { DATA_0: item.******, 
+    DATA_1:item.****** , 
+    DATA_2: item.******, 
+    DATA_3: item.******, 
+    DATA_4: "",
+    DATA_5: item.NOTE_****** ,
+    DATA_6: item.****** ,
+    DATA_7: item.****** ,
+    DATA_8: item.****** + " " + item.******  ,
+    DATA_9: item.****** ,
     lat: parseFloat(item.COORD_X.replace(",",".")), lng: parseFloat(item.COORD_Y.replace(",",".")) },
 ];
     
@@ -89,14 +89,14 @@ var arrayJson = [];
 })
 
 //Scrittura del geoJson utilizzando la libreria di scrittura di un file Json. Utilizzabile per qualsiasi Json
-   var file = './chiamate.geojson'
+   var file = './file.geojson'
    jsonfile.writeFile(file, arrayJson, {spaces: 2}, function(err) {
   console.error(err)
 })
 
 
 	/* Scrittura sul file semplice, ma non memorizza i tag che mi servono per il geoJson
-	fs.writeFile('./chiamate.json', json, function (err) {
+	fs.writeFile('./file.json', json, function (err) {
   if (err) throw err;
   console.log('Salvato');
 });
